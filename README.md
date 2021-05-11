@@ -1,5 +1,5 @@
 # NodeMCU-Boilerplate
-Boilerplate Code for IOT projects using NodeMCU Modules
+Boilerplate Code for IOT projects using NodeMCU
 
 ## esp_get.ino
 Updates voltage state of hardwares connected to the NodeMCU GPIO array, depending on any API returning a N bit data with binary variation in its characters for representing ON and OFF and where N equals the number of devices that can be controlled.

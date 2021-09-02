@@ -34,8 +34,11 @@ void loop() {
         urlPart+='&';
       dataApi+=urlPart;
     }
+    
     HTTPClient http;
-    http.begin(baseApi+dataApi);
+    WiFiClient client;
+    
+    http.begin(client, (baseApi+dataApi).c_str());
     Serial.println(baseApi+dataApi);
     int httpCode = http.GET();
     

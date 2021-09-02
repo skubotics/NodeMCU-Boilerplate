@@ -26,7 +26,9 @@ void loop() {
  
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
-    http.begin(api);
+    WiFiClient client;
+     
+    http.begin(client, api.c_str());
     int httpCode = http.GET();
     
     if(httpCode > 0){
